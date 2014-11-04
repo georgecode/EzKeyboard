@@ -65,7 +65,13 @@ h1{
 
 }
 
-
+.select{
+	background-color: #bd8ef9;
+	width: 80px;
+	height: 55px;
+	display: inline-block;
+	font-weight: bolder;
+}
 
 
 

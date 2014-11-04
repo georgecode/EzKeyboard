@@ -30,27 +30,42 @@ $(document).ready(function(){
         $('#b').click(function(){
             $('#b').html(bMp3)   
         });
-//-----------Em keys below
 
-    $(document).keydown(function(key){
-        switch(parseInt(key.which)){
-            case 65:
-                $('#d').html(dMp3);
-            break;
-            case 83:
-                $('#e').html(eMp3);
-            break;
-            case 68:
-                $('#g').html(gMp3);
-            break;
-            case 70:
-                $('#a').html(aMp3);
-            break;
-            case 71:
-                $('#b').html(bMp3);
-            break;
-        }
+
+
+//------------whatKey function start
+    function whatKey(one,two,three,four,five){
+        $(document).keydown(function(key){
+            switch(parseInt(key.which)){
+                case 65:
+                    $('#d').html(one);
+                break;
+                case 83:
+                    $('#e').html(two);
+                break;
+                case 68:
+                    $('#g').html(three);
+                break;
+                case 70:
+                    $('#a').html(four);
+                break;
+                case 71:
+                    $('#b').html(five);
+                break;
+            }
+        });
+    } 
+//------------whatKey function end
+    $('#Eminor').click(function(){
+        var eMinor = whatKey(dMp3,eMp3,gMp3,aMp3,bMp3) 
     });
+        
+    $('#Cmajor').click(function(){
+        var cMajor = whatKey(cMp3,dMp3,eMp3,gMp3,aMp3)
+    });
+
+
+//----------document ready end    
 });
 
 
