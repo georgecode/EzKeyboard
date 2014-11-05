@@ -56,11 +56,11 @@ $(document).ready(function(){
         });
     } 
 //------------whatKey function end
-    $('#Eminor').click(function(){
+    $('#em1').click(function(){
         var eMinor = whatKey(dMp3,eMp3,gMp3,aMp3,bMp3) 
     });
         
-    $('#Cmajor').click(function(){
+    $('#c1').click(function(){
         var cMajor = whatKey(cMp3,dMp3,eMp3,gMp3,aMp3)
     });
 

@@ -54,13 +54,14 @@ table {
 h1{
 	font-size: 3em;
 	color: green;
+	text-align: center;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	font-weight: bolder;
 }
 
-.key{
-	background-color: red;
-	width: 50px;
-	height: 100px;
-	display: inline-block;
+#controle{
+	text-align: center;
 
 
 }
@@ -71,8 +72,34 @@ h1{
 	height: 55px;
 	display: inline-block;
 	font-weight: bolder;
+	border: #362c3a 4px solid;
+	border-radius: 15px;
 }
 
+.key{
+	background-color: white;
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#5e5e5e), to(#ffffff));
+	width: 100px;
+	height: 200px;
+	display: inline-block;
+	margin-top: 20px;
+	border: black solid 3px;
+	border-radius: 5px 5px 30px 30px;
+	box-shadow: 10px 10px 5px #9982a3;
+}
+
+#keyboard{
+	text-align: center;
+}
+
+
+
+body{
+
+	background-color: #515142;
+	/*background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#003500), to(#008800));*/
+
+}
 
 
 
