@@ -2,8 +2,8 @@ $(document).ready(function(){
 
 
 
-    var c3mp3 = '<audio autoplay> <source src="sounds/notes/C3.mp3" type="audio/mpeg"></audio>'
-    var cx3mp3 = '<audio autoplay> <source src="sounds/notes/Cx3.mp3" type="audio/mpeg"></audio>'
+    var c3Mp3 = '<audio autoplay> <source src="sounds/notes/C3.mp3" type="audio/mpeg"></audio>'
+    var cx3Mp3 = '<audio autoplay> <source src="sounds/notes/Cx3.mp3" type="audio/mpeg"></audio>'
 
     var d3Mp3 = '<audio autoplay> <source src="sounds/notes/D3.mp3" type="audio/mpeg"></audio>'
 
@@ -18,8 +18,8 @@ $(document).ready(function(){
     var ax3Mp3 = '<audio autoplay> <source src="sounds/notes/Ax3.mp3" type="audio/mpeg"></audio>'
     var b3Mp3 = '<audio autoplay> <source src="sounds/notes/B3.mp3" type="audio/mpeg"></audio>'
     
-    var c4mp3 = '<audio autoplay> <source src="sounds/notes/C4.mp3" type="audio/mpeg"></audio>'
-    var cx4mp3 = '<audio autoplay> <source src="sounds/notes/Cx4.mp3" type="audio/mpeg"></audio>'
+    var c4Mp3 = '<audio autoplay> <source src="sounds/notes/C4.mp3" type="audio/mpeg"></audio>'
+    var cx4Mp3 = '<audio autoplay> <source src="sounds/notes/Cx4.mp3" type="audio/mpeg"></audio>'
     var d4Mp3 = '<audio autoplay> <source src="sounds/notes/D4.mp3" type="audio/mpeg"></audio>'
     var dx4Mp3 = '<audio autoplay> <source src="sounds/notes/Dx4.mp3" type="audio/mpeg"></audio>'
     var e4Mp3 = '<audio autoplay> <source src="sounds/notes/E4.mp3" type="audio/mpeg"></audio>'
@@ -100,12 +100,53 @@ $(document).ready(function(){
         });
     } 
 //------------whatKey function end
-    $('#em1').click(function(){
-        var eMinor = whatKey(e3Mp3,g3Mp3,a3Mp3,b3Mp3,d4Mp3,e4Mp3,g4Mp3,a4Mp3,b4Mp3) 
+
+    $('#c1').click(function(){
+        var cAm = whatKey(c3Mp3,d3Mp3,e3Mp3,g3Mp3,a3Mp3,c4Mp3,d4Mp3,e4Mp3,g4Mp3)
+    });
+    /*$('#c1').click(function(){
+        var cAm = whatKey(e3Mp3,g3Mp3,a3Mp3,b3Mp3,d4Mp3,e4Mp3,g4Mp3,a4Mp3,b4Mp3) 
+    });*/
+
+
+
+
+
+    $('#cx1').click(function(){
+        var cxAxm =whatKey(cx3Mp3,dx3Mp3,f3Mp3,gx3Mp3,ax3Mp3,cx4Mp3,dx4Mp3,f4Mp3,gx4Mp3)
+    });
+
+    $('#d1').click(function(){
+        var dxBm =whatKey(d3Mp3,e3Mp3,fx3Mp3,a3Mp3,b3Mp3,d4Mp3,e4Mp3,fx4Mp3,a4Mp3)
+    });
+    $('#dx1').click(function(){
+        var dxCm =whatKey(c3Mp3,dx3Mp3,f3Mp3,g3Mp3,ax3Mp3,c4Mp3,dx4Mp3,f4Mp3,g4Mp3)
+    });
+    $('#e1').click(function(){
+        var eCxm =whatKey(cx3Mp3,e3Mp3,fx3Mp3,gx3Mp3,b3Mp3,cx4Mp3,e4Mp3,fx4Mp3,gx4Mp3)
+    });
+    $('#f1').click(function(){
+        var fDm =whatKey(d3Mp3,f3Mp3,g3Mp3,a3Mp3,c4Mp3,d4Mp3,f4Mp3,g4Mp3,a4Mp3)
+    });
+    $('#fx1').click(function(){
+        var fxDxm =whatKey(dx3Mp3,fx3Mp3,gx3Mp3,ax3Mp3,cx4Mp3,dx4Mp3,fx4Mp3,gx4Mp3,ax4Mp3)
+    });
+
+    $('#g1').click(function(){
+        var gEm = whatKey(e3Mp3,g3Mp3,a3Mp3,b3Mp3,d4Mp3,e4Mp3,g4Mp3,a4Mp3,b4Mp3) 
     });
         
-    $('#c1').click(function(){
-        var cMajor = whatKey(c3Mp3,d3Mp3,e3Mp3,g3Mp3,a3Mp3)
+    $('#gx1').click(function(){
+        var gxFm = whatKey(dx3Mp3,f3Mp3,gx3Mp3,ax3Mp3,c4Mp3,dx4Mp3,f4Mp3,gx4Mp3,ax4Mp3)
+    });
+    $('#a1').click(function(){
+        var aFxm =whatKey(e3Mp3,fx3Mp3,a3Mp3,b3Mp3,cx4Mp3,e4Mp3,fx4Mp3,a4Mp3,b4Mp3)
+    });
+    $('#ax1').click(function(){
+        var axGm =whatKey(c3Mp3,d3Mp3,f3Mp3,g3Mp3,ax3Mp3,c4Mp3,d4Mp3,f4Mp3,g4Mp3)
+    });
+    $('#b1').click(function(){
+        var bGxm =whatKey(cx3Mp3,dx3Mp3,fx3Mp3,gx3Mp3,b3Mp3,cx4Mp3,dx4Mp3,fx4Mp3,gx4Mp3)
     });
 
 
