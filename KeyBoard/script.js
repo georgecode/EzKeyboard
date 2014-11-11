@@ -150,6 +150,15 @@ $(document).ready(function(){
     });
 
 
+    $('#gArab').click(function(){
+        var gScaleArab = whatKey(g3Mp3,a3Mp3,b3Mp3,c4Mp3,cx4Mp3,dx4Mp3,f4Mp3,g4Mp3,a4Mp3)
+    })
+
+    $('#gAlger').click(function(){
+        var gScaleArab = whatKey(g3Mp3,a3Mp3,ax3Mp3,c4Mp3,cx4Mp3,d4Mp3,dx4Mp3,fx4Mp3,g4Mp3)
+    })
+
+
 //----------document ready end
     
 });
