@@ -1,131 +1,60 @@
-$(document).ready(function(){ 
-    /*
-    var allowed71 = true;
-
-    $(document).keydown(function(){
-        if(!allowed71) return;
-        allowed71 = false;
-        $('#sound').html('<audio autoplay> <source src="sounds/notes/C4.mp3" type="audio/mpeg"></audio>');
-        console.log("fuck");                                   
-        });
-
-    $(document).keyup(function(){
-        $('#sound').html('');
-        console.log("fuck");                                   
-        allowed71 = true;
-    });
-    */
-//--------------------together--------------------
-var allowed71 = true;
-var allowed72 = true;
-
-$(document).on("keydown", function(event){
+$(document).ready(function(){
+    var sound = function(note){
+     return '<audio autoplay> <source src="sounds/notes/' + note + '.mp3" type="audio/mpeg"></audio>'
+    }
     
-
-    if(event.which === 71){
-        if(!allowed71) return;
-        allowed71 = false;
-
-        $('#key1').html('<audio autoplay> <source src="sounds/notes/C4.mp3" type="audio/mpeg"></audio>')
-        console.log(event.which)
+    console.log (sound('C4'))
 
 
-        $(document).on("keyup", function(event){
-            if(event.which === 71){
-            $('#key1').html('')
-            console.log(event.which)
-            allowed71 = true;
+//'<audio autoplay> <source src="sounds/notes/C4.mp3" type="audio/mpeg"></audio>'
+
+    var work = function(allowed,num,keyid,tone){
+
+        var allowed = true;
+
+        $(document).on("keydown", function(xevent){
+            
+
+            if(xevent.which === num){
+                if(!allowed) return;
+                allowed = false;
+
+                $(keyid).addClass('keyIsDown')
+                $(keyid).html(sound(tone))
+                console.log(xevent.which)
+
+
+                $(document).on("keyup", function(xevent){
+
+                    if(xevent.which === num){            
+
+                    $(keyid).html('');
+                    $(keyid).removeClass('keyIsDown')
+
+                    allowed = true;
+                    }
+                })
             }
+
         })
     }
 
-//------------------------------------------------------
-    if(event.which === 72){
-        if(!allowed72) return;
-        allowed72 = false;
-
-        $('#key2').html('<audio autoplay> <source src="sounds/notes/G4.mp3" type="audio/mpeg"></audio>')
-        console.log(event.which)
-
-
-        $(document).on("keyup", function(event){
-            if(event.which === 72){
-            $('#key2').html('')
-            console.log(event.which)
-            allowed72 = true;
-            }
-        })
-    }    
-//-------------------------------------------------
-/*
-    else if(event.which === 72){
-       $('#key2').html('<audio autoplay> <source src="sounds/notes/C4.mp3" type="audio/mpeg"></audio>')
-    console.log(event.which) 
-    }
-    */
-//--------------------------------------------------------
-})
-
-
-
-//--------------------together-end------------------
-
-
-
-/*
-//---------------------------------------------------  
-        $(document).keydown(function(key){
-            switch(parseInt(key.which)){
-               
-                //70 = f key
-                case 70:
-                    $('#sound').html('<audio autoplay> <source src="sounds/notes/C4.mp3" type="audio/mpeg"></audio>');
-                         console.log("fuck");                                   
-                break;
-
-                //71 = g key
-                case 71:
-                    $('#sound').html('<audio autoplay> <source src="sounds/notes/G4.mp3" type="audio/mpeg"></audio>');
-                break;
-               
-            }
-        });
-//-------------------------------------------------
+work('65a', 65, '.key1', 'E3')
+work('83s', 83, '.key2', 'G3')
+work('68d', 68, '.key3', 'A3')
+work('70f', 70, '.key4', 'B3')
+work('71g', 71, '.key5', 'D4')
+work('72h', 72, '.key6', 'E4')
+work('74j', 74, '.key7', 'G4')
+work('75k', 75, '.key8', 'A4')
+work('76l', 76, '.key9', 'B4')
 
 
 
 
+//work('72h',72, '.key9', 'C4')
 
 
-
-
-
-
-
-
-
-//------------------------------------------------- 
-
- */
-
-
-
-
-
-
-
-
-
-});
-/*
-$(document).on("keyup", function(event){
-    if(event.which === 71){
-    $('#key1').html('')
-    console.log(event.which)
-    }
-})
-*/
-
-
+})//----------end of document------
 
 
